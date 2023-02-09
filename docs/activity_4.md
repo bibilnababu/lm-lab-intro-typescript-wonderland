@@ -58,8 +58,8 @@ This is great! We want our ball to be a `Ball` and mallet to be a `Mallet`.
 
 👉 If we use the correct ball and mallet then we'll succeed at the particular game we're playing:
 
-```JavaScript
-game.hit("Hedgehog", "Flamingo")
+```JavaScript"Hedgehog", "Flamingo"
+game.hit()
 ```
 
 🥳 These changes are enough to pass by the croquet challenge.

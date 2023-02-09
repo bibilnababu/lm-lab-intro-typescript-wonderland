@@ -16,7 +16,7 @@ export function meetTheQueen(): void {
 
 	let guilty: boolean = false;
 
-	let witnesses: Witness[] = []; // 👉 FIXME ❌ - call getWitnesses here
+	let witnesses=getWitnesses(['The Mad Hatter', 'The March Hare', 'The Cheshire Cat', 'The White Rabbit']); 
 
 	if (!witnesses || witnesses.length === 0) {
 		print(`No witnesses have come forward to defend you.`);
@@ -45,7 +45,8 @@ export function meetTheQueen(): void {
 	}
 }
 
-// 👉 FIXME ❌ - this function needs writing to meet the above criteria
-function getWitnesses(): any {
-	return [];
+
+function getWitnesses(witnessNames: string[]) : Witness[] {
+	return witnessNames.map(n => { return { name: n, giveEvidence: () => 'Not Guilty',}});
+
 }

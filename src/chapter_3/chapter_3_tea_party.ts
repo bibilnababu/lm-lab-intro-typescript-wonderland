@@ -19,8 +19,19 @@ type Table = {
 };
 
 function setTheTable(): Table {
-	// 👉 FIXME ❌
-	return { seats: [] };
+	
+	const table: Table = { seats: [] }
+	 
+	 for (let i = 0; i < 4; i++) {
+		table.seats.push({
+			drink: {
+				type: 'Tea',
+				poured: true,
+			},
+		});
+	}
+	return table;
+	 
 }
 
 export function attendATeaParty() {
@@ -30,7 +41,7 @@ export function attendATeaParty() {
 	print(`He and the March Hare set the table...`);
 
 	const drinks = setTheTable();
-
+	
 	if (!drinks || !drinks.seats || drinks.seats.length <= 0) {
 		print(`... but something went very wrong with the table. 😱`);
 		return endAdventure();
