@@ -1,6 +1,6 @@
 import { endAdventure, haveAdventures } from '../..';
 import { askQuestion, clear, print } from '../ui/console';
-
+import { goShoppingWithAlice} from '../chapter_7/chapter_7_goshopping';
 // ⚠️ This is a very unusual type setup. It's not a great idea in the real world
 // to nest so many properties with the exact same name.
 // But in Wonderland, this sort of thing is normal,
@@ -35,7 +35,8 @@ export function wakeUp(): void {
 		print(
 			'✅ CONGRATULATIONS! You successfully made it through Wonderland! 🥳'
 		);
-
+		print(`🛍️ Alice decides to go for shopping...... 🛍️ `);
+		return askQuestion('Press ENTER to continue! ', goShoppingWithAlice);
 		return askQuestion(
 			'Press ENTER to re-enter Wonderland! ',
 			haveAdventures
